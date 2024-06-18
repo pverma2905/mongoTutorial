@@ -1,0 +1,1 @@
+db.emp.insertOne({"name":"roshan","email":"roshan@gmail.com","marks":[100,90,80,70]});

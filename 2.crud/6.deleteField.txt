@@ -1,0 +1,8 @@
+1)delete a field in one document
+db.emp.updateMany({"email":"pranav@gmail.com"},{$unset:{fname:1}})
+
+2)delete a field in all document
+db.emp.updateMany({},{$unset:{fname:1}})
+
+3)delete a multiple field in all document
+db.emp.updateMany({},{$unset:{fname:1, email:1}})

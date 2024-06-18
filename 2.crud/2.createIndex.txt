@@ -1,0 +1,5 @@
+db.emp.createIndex({email:1},{unique:true});
+
+db.emp.insertOne({name:"ram",email:"ram@gmail.com"});
+
+db.emp.insertOne({name:"ram1", email:"ram@gmail.com"}) // getting 11000 error

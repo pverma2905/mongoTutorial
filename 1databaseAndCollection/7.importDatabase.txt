@@ -1,0 +1,1 @@
+mongodump -d pranav_tech -o ./

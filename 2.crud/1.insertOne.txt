@@ -1,0 +1,3 @@
+db.emp.insertOne({"name":"rahul","email":"rahul@gmail.com"})
+
+db.emp.find()

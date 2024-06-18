@@ -1,0 +1,5 @@
+1) first we import a database?
+mongodump -d pranav_tech -o ./
+
+2)mongorestore
+mongorestore -d pranavtechnology ./pranav_tech

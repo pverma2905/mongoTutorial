@@ -1,0 +1,1 @@
+db.emp.renameCollection("emp11");

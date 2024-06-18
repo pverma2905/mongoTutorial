@@ -1,0 +1,11 @@
+1)single document field name change
+db.emp.updateMany({"email":"rahul"},{$rename:{name:"fname"}});
+
+2)single document field name change for object
+db.emp.updateMany({"email":"pranav@gmail.com"},{$rename:{repository.mgrId:repository.mgId}})
+
+3)All document field rename
+db.emp.updateMany({},{$rename:{name:"fname"}})
+
+4)All document field rename
+db.emp.updateMany({},{$rename:{name:"fname"}})

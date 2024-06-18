@@ -1,0 +1,1 @@
+db.emp.insertOne({"name":"vinay","email":"vinay@gmail.com","reporting":{"mgrId":"10","mgrName":"shubham"}});
