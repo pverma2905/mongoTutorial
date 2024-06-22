@@ -1,0 +1,42 @@
+db.createCollection("employees");
+
+db.employees.createIndex({empId:1},{unique:true});
+db.employees.createIndex({email:1},{unique:true});
+db.employees.createIndex({phone:1},{unique:true});
+
+db.employees.insertOne({
+empId:201,
+name:"Rahul Gupta",
+email:"rahul@gmail.com",
+phone:1111111111,
+age:24,
+gender:"M",
+city:"Agra",
+profile:"Software Engineer",
+salary:40000,
+lang:["Hindi","English","Marathi"],
+reportingmgr:{mgrid:101, mgrname:"Mangesh", mgrprofile:"Senior Software Engineer"},
+deptwork:[2,3,8]
+});
+
+
+db.employees.insertMany([
+{empId:202,name:"Rajan Gupta",email:"rajan@gmail.com",phone:2222222222,age:22,gender:"M",city:"Mathura",profile:"Software Developer",salary:30000,lang:["Hindi","English"],
+reportingmgr:{mgrid:102, mgrname:"Deepak", mgrprofile:"Software Engineer"},deptwork:[1,2]},
+{empId:203,name:"Kajal Gupta",email:"kajal@gmail.com",phone:3333333333,age:23,gender:"F",city:"Aligarh",profile:"Software Tester",salary:22000,lang:["Hindi","English"],
+reportingmgr:{mgrid:103, mgrname:"Pratima", mgrprofile:"Senior Software Engineer"},deptwork:[5,6]},
+{empId:204,name:"Prity Gupta",email:"prityg@gmail.com",phone:4444444444,age:24,gender:"F",city:"Kanpur",profile:"Support Engineer",salary:16000,lang:["Hindi","English","Marathi","Tamil"],
+reportingmgr:{mgrid:104, mgrname:"Sachin", mgrprofile:"Senior Software Engineer"},deptwork:[6,7]},
+{empId:205,name:"Roshan Jaiswar",email:"roshan@gmail.com",phone:5555555555,age:25,gender:"M",city:"Meerut",profile:"Bussiness Analyst",salary:59000,lang:["Hindi","English","Punjabi","Tamil"],
+reportingmgr:{mgrid:105, mgrname:"Sunil", mgrprofile:"Project Manager"},deptwork:[9]},
+{empId:206,name:"Prity Singh",email:"pritys@gmail.com",phone:6666666666,age:26,gender:"F",city:"Jhansi",profile:"Senior Software Engineer",salary:90000,lang:["Hindi","English"],
+reportingmgr:{mgrid:106, mgrname:"Priyanka", mgrprofile:"Project Manager"},deptwork:[2,3,8]}, 
+{empId:207,name:"Zaid Shaikh",email:"zaid@gmail.com",phone:7777777777,age:27,gender:"M",city:"Mumbai",profile:"Software Engineer",salary:28000,lang:["Hindi","English","Marathi","Urdu"],
+reportingmgr:{mgrid:107, mgrname:"Mangesh", mgrprofile:"Senior Software Engineer"},deptwork:[3,8]},
+{empId:208,name:"Suraj Jaiswar",email:"surajj@gmail.com",phone:8888888888,age:28,gender:"M",city:"Pune",profile:"Support Engineer",salary:17000,lang:["Hindi","English","Marathi","Punjabi"],
+reportingmgr:{mgrid:108, mgrname:"Sachin", mgrprofile:"Senior Software Engineer"},deptwork:[7]},
+{empId:209,name:"Govinda Singh",email:"govinda@gmail.com",phone:9999999999,age:29,gender:"M",city:"Hyderabad",profile:"Senior Software Engineer",salary:121000,lang:["English","Marathi"],
+reportingmgr:{mgrid:109, mgrname:"Priyanka", mgrprofile:"Project Manager"},deptwork:[8,6,7]},
+{empId:210,name:"Suraj Yadav",email:"surajy@gmail.com",phone:1010101010,age:30,gender:"M",city:"Banglore",profile:"Tech Support",salary:14000,lang:["Hindi","English","Tamil"],
+reportingmgr:{mgrid:110, mgrname:"Divya", mgrprofile:"Tech Lead"},deptwork:[6,9,2]}   
+]);

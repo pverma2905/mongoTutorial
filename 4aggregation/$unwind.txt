@@ -1,0 +1,1 @@
+spilit array into mutiple form

@@ -1,0 +1,3 @@
+db.employees.find();
+db.employees.find().count();
+db.employees.findOne();
