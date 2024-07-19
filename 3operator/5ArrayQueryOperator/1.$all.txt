@@ -1,0 +1,2 @@
+db.employees.find({lang:{$all:['Hindi','English']}});// if both are exist
+db.employees.find({deptwork:{$all:[8,7]}});

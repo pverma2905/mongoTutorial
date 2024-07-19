@@ -1,0 +1,10 @@
+
+
+=> salary multiply by 2
+db.employees.updateOne({empId:207},{$mul:{salary:2}});
+
+=> salary multiply by 1.5 and age multiply by 2
+db.employees.updateOne({empId:207},{$mul:{salary:1.5,age:2}});
+
+=> if fields not exist
+db.employees.updateOne({empId:207},{$mul:{salary1:3}});

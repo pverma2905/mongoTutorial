@@ -1,0 +1,2 @@
+any one
+db.employees.find({deptwork:{$elemMatch:{$lt:3}}});

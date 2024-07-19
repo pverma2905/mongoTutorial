@@ -1,0 +1,15 @@
+$min:- 
+1)minimum value is update if database value  is less than curentvalue   
+2)if field does not exist so $min operator set the field 
+
+=>if input salry(25000) is less then current salary  
+db.employees.updateOne({"empId":208},{$min:{salary:25000}}); // salary:25000 
+
+=>if database salary is less(25000) then convert 30000
+db.employees.updateOne({"empId":208},{$min:{salary:30000}});  // not modified
+
+=>if database salary is less(25000) then convert 20000
+db.employees.updateOne({"empId":208},{$min:{salary:20000,age:20}});  // modified
+
+=> add field if not exist
+db.employees.updateOne({"empId":208},{$min:{salary1:45000}});  // modified

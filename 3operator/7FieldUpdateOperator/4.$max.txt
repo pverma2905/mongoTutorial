@@ -1,0 +1,15 @@
+$max:- 
+1)maximum value is update if database value  is greater than curentvalue   
+2)if field does not exist so $max operator set the field 
+
+=>if input salry(1,40,000) is greater then current salary 
+db.employees.updateOne({"empId":209},{$max:{salary:140000}}); // salary:140000
+
+=>if input salry(140000) is greater then current salary  then convert 120000
+db.employees.updateOne({"empId":209},{$max:{salary:120000}});  // not modified
+
+=>if input salry(140000) is greater then current salary  then convert 150000
+db.employees.updateOne({"empId":209},{$max:{salary:150000,age:28}});  // modified
+
+=> add field if not exist
+db.employees.updateOne({"empId":209},{$max:{salary1:50000}});  // modified

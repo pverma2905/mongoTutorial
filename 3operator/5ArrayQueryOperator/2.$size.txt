@@ -1,0 +1,2 @@
+db.employees.find({deptwork:{$size:2}});
+db.employees.find({lang:{$size:4}});

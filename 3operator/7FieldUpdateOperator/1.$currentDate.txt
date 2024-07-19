@@ -1,0 +1,17 @@
+// remove doj remove all the document
+db.employees.updateMany({},{$unset:{doj:1}});
+
+// add date
+db.employees.updateOne({"empId":202},{$currentDate:{doj:{$type:'date'}}});
+
+// add timestamp
+
+db.employees.updateOne({"empId":203},{$currentDate:{doj:{$type:'timestamp'}}});
+
+// default currentDate stored
+
+db.employees.updateOne({"empId":204},{$currentDate:{doj:true}});
+
+// add date to all document
+
+db.employees.updateMany({},{$currentDate:{doj:{$type:'date'}}});

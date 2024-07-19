@@ -1,0 +1,5 @@
+=>rename the field
+db.employees.updateOne({"empId":210},{$rename:{name:"fname"}});
+
+=>rename the field
+db.employees.updateOne({"city":"pune"},{$rename:{name:"fname"}});

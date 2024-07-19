@@ -1,0 +1,16 @@
+increment operatorn increment a specified value
+
+=>increment by 1000
+db.employees.updateOne({'empId':210},{$inc:{salary:1000}});
+
+=>decrement by 2000
+db.employees.updateOne({'empId':210},{$inc:{salary:-2000}});
+
+=>age increment 1 and salary increment 1000
+db.employees.updateOne({empId:210},{$inc:{age:1,salary:1000}}); 
+
+=> add field also if not exist
+db.employees.updateOne({empId:210},{$inc:{salary1:1000}});
+
+=>all salary increment by a 10000
+db.employees.updateMany({},{$inc:{salary:10000}});
