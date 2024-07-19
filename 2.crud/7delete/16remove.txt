@@ -1,0 +1,2 @@
+it delete one or more record
+db.employees.remove({empId:204});

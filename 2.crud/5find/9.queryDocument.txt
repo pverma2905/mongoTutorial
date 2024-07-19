@@ -1,0 +1,4 @@
+db.employees.find({city:"Agra"})
+db.employees.findOne({city:"Agra"})
+
+db.employees.find({"reportingmgr.mgrid":101})// embedded document

@@ -1,0 +1,4 @@
+upsert=> update+insert
+add new document with upsert:true if not match
+
+db.employees.updateOne({"empId":211},{$set:{name:"Anshul"}},{upsert:true});

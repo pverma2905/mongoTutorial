@@ -1,0 +1,9 @@
+add new field if field is not exist
+
+//doj is not exist feld in database
+db.employees.updateMany({city:"Mathura"},{$set:{doj:new Date()}});
+// now doj is added
+
+
+//all record added doj
+db.employees.updateMany({},{$set:{doj:new Date()}});

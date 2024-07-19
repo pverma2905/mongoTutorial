@@ -1,0 +1,2 @@
+db.employees.updateOne({"empId":201},{$set:{"city":"delhi"}});
+db.employees.updateMany({"city":"Mathura"},{$set:{"salary":60000}});
